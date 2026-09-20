@@ -1,0 +1,517 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f1026;
+  color: white;
+}
+
+.portfolio {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0f1026,
+    #24134d
+  );
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(15, 16, 38, 0.95);
+}
+
+.navbar h2 {
+  color: #ff8bd8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff8bd8;
+}
+
+/* Common */
+.welcome {
+  color: #ff8bd8;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h2 span {
+  color: #ff8bd8;
+}
+
+/* Hero */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 8%;
+}
+
+.hero-text {
+  max-width: 550px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #ff8bd8;
+}
+
+.hero h2 {
+  color: #c6b5ff;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #d2cce6;
+  line-height: 1.8;
+}
+
+.main-button,
+.project-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 25px;
+  border-radius: 25px;
+  background: #ff75c8;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.main-button:hover,
+.project-button:hover {
+  background: #d957a9;
+  transform: translateY(-3px);
+}
+
+/* Anime Circle */
+.hero-image {
+  text-align: center;
+}
+
+.anime-circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #ff8bd8,
+    #8f7aff
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  box-shadow: 0 0 60px #a65cff;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-image h3 {
+  margin-top: 25px;
+  color: #ffb8e5;
+  font-size: 14px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* About */
+.about {
+  padding: 80px 8%;
+  text-align: center;
+  background: #171536;
+  color: white;
+}
+
+.about h2,
+.skills h2,
+.projects h2,
+.contact h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.about > p:not(.welcome),
+.contact > p:not(.welcome) {
+  max-width: 650px;
+  margin: 15px auto;
+  line-height: 1.8;
+  color: #d2cce6;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.about-card {
+  width: 200px;
+  padding: 25px 15px;
+  border: 1px solid #7055a5;
+  border-radius: 15px;
+  background: #211b46;
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff8bd8;
+}
+
+.about-card h3 {
+  color: #ff8bd8;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  color: #d2cce6;
+}
+
+/* Skills */
+.skills {
+  padding: 80px 8%;
+  text-align: center;
+  color: white;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  width: 220px;
+  padding: 30px 20px;
+  background: #211b46;
+  border: 1px solid #7055a5;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #7045a5;
+}
+
+.skill-card h3 {
+  color: #ff8bd8;
+  margin-bottom: 15px;
+}
+
+.skill-card p {
+  color: #d2cce6;
+  line-height: 1.6;
+}
+
+/* Projects */
+.projects {
+  padding: 80px 8%;
+  text-align: center;
+  background: #171536;
+  color: white;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.project-card {
+  width: 300px;
+  padding: 30px 25px;
+  background: #211b46;
+  border: 1px solid #7055a5;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff8bd8;
+}
+
+.project-card h3 {
+  color: #ff8bd8;
+  margin-bottom: 20px;
+}
+
+.project-card p {
+  color: #d2cce6;
+  line-height: 1.7;
+}
+
+.project-card .tech {
+  margin-top: 15px;
+  color: #c6b5ff;
+  font-size: 14px;
+}
+
+.project-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* Contact */
+.contact {
+  padding: 80px 8%;
+  text-align: center;
+  color: white;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-links a {
+  color: #ff8bd8;
+  text-decoration: none;
+  border: 1px solid #7055a5;
+  padding: 12px 25px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  background: #ff75c8;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0b0c1d;
+  color: #d2cce6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .anime-circle {
+    width: 200px;
+    height: 200px;
+    font-size: 70px;
+  }
+
+  .about h2,
+  .skills h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 34px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+.character-image {
+  width: 320px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 3px solid #ff8bd8;
+  box-shadow: 0 0 35px #a65cff;
+  animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .character-image {
+    width: 260px;
+    height: 320px;
+  }
+}
+
+/* Anime Power Cards */
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: #ff8bd8;
+  transition: left 0.4s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 139, 216, 0.5);
+}
+
+.skill-card:hover::before {
+  left: 0;
+}
+
+.skill-card h3 {
+  font-size: 22px;
+  color: #ff8bd8;
+}
+
+.skill-card p {
+  font-size: 15px;
+}
+
+/* Anime Project Cards */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.project-card::before {
+  content: "MISSION";
+  position: absolute;
+  top: 12px;
+  right: -28px;
+  font-size: 10px;
+  color: #ffb8e5;
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 35px rgba(255, 117, 200, 0.4);
+}
+
+.project-card h3 {
+  font-size: 21px;
+}
+
+.project-button {
+  transition: 0.3s ease;
+}
+
+.project-button:hover {
+  box-shadow: 0 0 20px #ff75c8;
+}
+
+/* Contact Anime Style */
+
+.contact {
+  background: linear-gradient(135deg, #171536, #2a1850);
+}
+
+.contact h2 {
+  color: white;
+}
+
+.contact-links a {
+  transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff75c8;
+}
+
+.contact p {
+  font-size: 17px;
+}
+.about-card {
+  transition: 0.3s ease;
+}
+
+.about-card:hover {
+  background: rgba(255, 184, 229, 0.12);
+  border: 1px solid #ffb8e5;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+  transform: translateY(-5px);
+}
+
